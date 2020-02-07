@@ -1,0 +1,19 @@
+{
+  "components": {
+    "layout": {
+      "header": {
+        "appName": "UIKit React setup"
+      }
+    }
+  },
+  "views": {
+    "events": {
+      "title": "Events"
+    },
+    "login": {},
+    "notFound": {},
+    "overview": {
+      "title": "Assets"
+    }
+  }
+}
