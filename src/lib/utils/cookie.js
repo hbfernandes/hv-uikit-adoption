@@ -7,3 +7,11 @@
  *  with the terms and conditions stipulated in the agreement/contract
  *  under which the software has been supplied.
  */
+
+import Cookies from "js-cookie";
+
+export const getCookie = key => Cookies.get(key);
+
+export const setCookie = ({ key, value }) => Cookies.set(key, value);
+
+export const removeCookie = key => Cookies.remove(key);

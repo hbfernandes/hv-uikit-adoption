@@ -7,3 +7,9 @@
  *  with the terms and conditions stipulated in the agreement/contract
  *  under which the software has been supplied.
  */
+
+import { createStyles } from "@material-ui/core";
+
+const styles = () => createStyles({});
+
+export default styles;

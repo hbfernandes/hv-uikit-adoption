@@ -4,3 +4,4 @@ node_modules
 # Dev directories
 build
 config
+public

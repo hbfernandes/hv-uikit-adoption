@@ -2,29 +2,32 @@
 const { resolve } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const { CheckerPlugin } = require("awesome-typescript-loader");
-const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
 const BASE_PATH = resolve(__dirname, "../..");
+console.log("BASE_PATH: ", BASE_PATH);
 
 module.exports = {
   resolve: {
-    extensions: [".json", ".js", ".jsx", ".ts", ".tsx"],
-    plugins: [
-      new TsconfigPathsPlugin({ configFile: `${BASE_PATH}/tsconfig.json` })
-    ]
+    extensions: [".json", ".js", ".jsx"],
+    alias: {
+      assets: `${BASE_PATH}/src/assets`,
+      components: `${BASE_PATH}/src/components`,
+      lib: `${BASE_PATH}/src/lib`,
+      pages: `${BASE_PATH}/src/pages`,
+      store: `${BASE_PATH}/src/store`
+    }
   },
   context: `${BASE_PATH}/src`,
+  output: {
+    path: resolve(__dirname, "../../build"),
+    publicPath: "/"
+  },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ["babel-loader", "source-map-loader"]
-      },
-      {
-        test: /\.(ts|tsx)$/,
-        use: ["babel-loader", "awesome-typescript-loader"]
       },
       {
         test: /\.(jpe?g|png|gif)$/i,
@@ -47,7 +50,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new CheckerPlugin(),
     new HtmlWebpackPlugin({
       template: `${BASE_PATH}/public/index.html`
     }),

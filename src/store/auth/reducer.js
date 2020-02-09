@@ -7,3 +7,20 @@
  *  with the terms and conditions stipulated in the agreement/contract
  *  under which the software has been supplied.
  */
+
+import { AuthActions } from "./actions";
+
+const initialState = {
+  isAuthed: true
+};
+
+const authReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case AuthActions.SET_AUTH:
+      return { ...state, isAuthed: action.isAuthed };
+    default:
+      return state;
+  }
+};
+
+export default authReducer;

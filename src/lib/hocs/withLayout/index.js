@@ -7,3 +7,5 @@
  *  with the terms and conditions stipulated in the agreement/contract
  *  under which the software has been supplied.
  */
+
+export { default } from "./withLayout";

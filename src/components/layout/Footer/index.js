@@ -7,3 +7,9 @@
  *  with the terms and conditions stipulated in the agreement/contract
  *  under which the software has been supplied.
  */
+
+import withStyles from "@material-ui/core/styles/withStyles";
+import styles from "./styles";
+import Footer from "./Footer";
+
+export default withStyles(styles, { name: "Footer", withTheme: true })(Footer);

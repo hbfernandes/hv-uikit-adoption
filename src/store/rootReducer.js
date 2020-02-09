@@ -7,3 +7,16 @@
  *  with the terms and conditions stipulated in the agreement/contract
  *  under which the software has been supplied.
  */
+
+import { combineReducers } from "redux";
+import { connectRouter } from "connected-react-router";
+
+import authReducer from "./auth/reducer";
+
+const createRootReducer = history =>
+  combineReducers({
+    auth: authReducer,
+    router: connectRouter(history)
+  });
+
+export default createRootReducer;

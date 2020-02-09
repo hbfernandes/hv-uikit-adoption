@@ -7,3 +7,10 @@
  *  with the terms and conditions stipulated in the agreement/contract
  *  under which the software has been supplied.
  */
+
+import React from "react";
+import HvFooter from "@hv/uikit-react-lab/dist/Footer";
+
+const Footer = () => <HvFooter />;
+
+export default Footer;

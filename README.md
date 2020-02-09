@@ -83,7 +83,7 @@ We followed a structure that is scalable and modular enough for an Enterprise ap
 The code is grouped by feature/ domain, "colocating" all related files (styles, JS and tests) together inside the same feature folder. This way we try to avoid too much nesting as it becomes harder to write relative imports between them, or to update those imports when the files are moved.
 
 ```text
-views/
+pages/
     Login/
         index.js
         Login.tsx
@@ -102,13 +102,13 @@ views/
   - `index.tsx` - is the entry point of our app.
   - `App.tsx` - is our top-level component. Here we configure all the providers needed: `UIKit`, `Redux`, `Router`.
   - `assets` - all dependencies shared by the application. This provides a single location for storing files that could be seen as external to the project itself.
-  - `components` - components are grouped by views. Each top folder holds all the components that are common to a specific view.
-    - `views/Login -> components/login/LoginForm`
+  - `components` - components are grouped by pages. Each top folder holds all the components that are common to a specific view.
+    - `pages/Login -> components/login/LoginForm`
   - `lib` - code that is used/ shared globally. It helps to keep the code DRY by exporting repeated logic to a singular location and importing it where used.
   - `store` - all files related with Redux state management. We grouped all actions and reducers by API domain. We promote this pattern because if a feature of the app gets removed, we can remove a single folder rather than going to top-level folders (actions, reducers, etc.) and remove files individually.
     - `lib/api/auth -> store/auth`
-  - `views` - components that are tightly couple with routes. Each view should map the corresponding route. It also should be simple and free from logic that transforms data, focused on implementing the layout using the [UIKit grid system](https://pentaho.github.io/hv-uikit-react/?path=/story/layout--grid).
-    - `route/login -> views/Login/`
+  - `pages` - components that are tightly couple with routes. Each view should map the corresponding route. It also should be simple and free from logic that transforms data, focused on implementing the layout using the [UIKit grid system](https://pentaho.github.io/hv-uikit-react/?path=/story/layout--grid).
+    - `route/login -> pages/Login/`
 - `typings` - feature/ domain custom type definitions, as also global definitions for untyped NPM modules.
   
 # State Management - Redux

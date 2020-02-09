@@ -6,14 +6,28 @@
       }
     }
   },
-  "views": {
-    "events": {
-      "title": "Events"
-    },
-    "login": {},
-    "notFound": {},
+  "pages": {
     "overview": {
-      "title": "Assets"
+      "title": "Overview"
+    },
+    "events": {
+      "workOrders": {
+        "title": "Work Orders"
+      }
+    },
+    "asset": {
+      "title": "Asset"
+    },
+    "analytics": {
+      "modelEffectiveness": {
+        "title": "Model Effectiveness"
+      },
+      "trendAnalysis": {
+        "title": "Trend Analysis"
+      }
+    },
+    "notFound": {
+      "title": "Not Found"
     }
   }
 }
