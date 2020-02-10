@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withLayout is rendered correctly 1`] = `
+<Fragment>
+  <WithStyles(Connect(Header)) />
+  <section
+    id="content"
+    style={
+      Object {
+        "marginTop": 50,
+        "padding": "30px 15px",
+      }
+    }
+  >
+    <Component />
+  </section>
+</Fragment>
+`;
+
+exports[`withLayout is rendered correctly 2`] = `
+<Fragment>
+  <WithStyles(Connect(Header)) />
+  <section
+    id="content"
+    style={
+      Object {
+        "marginTop": 50,
+        "padding": "0",
+      }
+    }
+  >
+    <Component />
+  </section>
+  <WithStyles(Footer) />
+</Fragment>
+`;
