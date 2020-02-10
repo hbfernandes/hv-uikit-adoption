@@ -18,10 +18,6 @@ module.exports = {
     }
   },
   context: `${BASE_PATH}/src`,
-  output: {
-    path: resolve(__dirname, "../../build"),
-    publicPath: "/"
-  },
   module: {
     rules: [
       {
