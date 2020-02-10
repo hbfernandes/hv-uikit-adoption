@@ -2,28 +2,20 @@
   "components": {
     "layout": {
       "header": {
-        "appName": "UIKit React setup"
+        "appName": "Migration Platform"
       }
     }
   },
   "pages": {
-    "overview": {
-      "title": "Overview"
+    "migrationManagementTool": {
+      "title": "Migration Management Tool"
     },
-    "events": {
-      "workOrders": {
-        "title": "Work Orders"
-      }
-    },
-    "asset": {
-      "title": "Asset"
-    },
-    "analytics": {
-      "modelEffectiveness": {
-        "title": "Model Effectiveness"
+    "operationalReports": {
+      "migrationJobMonitoring": {
+        "title": "Migration Job Monitoring"
       },
-      "trendAnalysis": {
-        "title": "Trend Analysis"
+      "management": {
+        "title": "Management"
       }
     },
     "notFound": {

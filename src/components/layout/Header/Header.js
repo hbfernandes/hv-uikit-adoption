@@ -14,40 +14,25 @@ import { useTranslation } from "react-i18next";
 import HvHeader from "@hv/uikit-react-core/dist/Header";
 import HvUserIcon from "@hv/uikit-react-icons/dist/Generic/User";
 import { getSelectedPath } from "lib/utils/path";
-import HitachiLogo from "assets/hitachi-logo.svg";
+import UBSLogo from "assets/ubs-logo.svg";
 
 const pages = {
   data: [
     {
-      label: "Overview",
-      path: "/overview"
+      label: "Migration Management Tool",
+      path: "/migration-management-tool"
     },
     {
-      label: "Events",
+      label: "Operational Reports",
       subData: {
         data: [
           {
-            label: "Work Orders",
-            path: "/events/work-orders"
-          }
-        ]
-      }
-    },
-    {
-      label: "Asset",
-      path: "/asset"
-    },
-    {
-      label: "Analytics",
-      subData: {
-        data: [
-          {
-            label: "Model Effectiveness",
-            path: "/analytics/model-effectiveness"
+            label: "Migration Job Monitoring",
+            path: "/operational-reports/migration-job-monitoring"
           },
           {
-            label: "Trend Analysis",
-            path: "/analytics/trend-analysis"
+            label: "Management",
+            path: "/operational-reports/management"
           }
         ]
       }
@@ -63,7 +48,7 @@ const Header = ({ router, auth, logout }) => {
 
   return (
     <HvHeader
-      companyLogo={<HitachiLogo width="100px" />}
+      companyLogo={<UBSLogo width="70px" height="25px" />}
       label={t("components.layout.header.appName")}
       actionValues={[
         {
