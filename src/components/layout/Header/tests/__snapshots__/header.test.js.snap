@@ -28999,7 +28999,8 @@ body {
                 }
                 companyLogo={
                   <test-file-stub
-                    width="100px"
+                    height="25px"
+                    width="70px"
                   />
                 }
                 label="components.layout.header.appName"
@@ -29031,7 +29032,8 @@ body {
                   }
                   companyLogo={
                     <test-file-stub
-                      width="100px"
+                      height="25px"
+                      width="70px"
                     />
                   }
                   fixVerticalNavigation={false}
@@ -30107,7 +30109,8 @@ body {
                                       centerAlignElement={false}
                                       companyLogo={
                                         <test-file-stub
-                                          width="100px"
+                                          height="25px"
+                                          width="70px"
                                         />
                                       }
                                       productLogo={null}
@@ -30130,7 +30133,8 @@ body {
                                         }
                                         companyLogo={
                                           <test-file-stub
-                                            width="100px"
+                                            height="25px"
+                                            width="70px"
                                           />
                                         }
                                         productLogo={null}
@@ -31072,7 +31076,8 @@ body {
                                             containerClassName="Brand-iconContainer-49"
                                             image={
                                               <test-file-stub
-                                                width="100px"
+                                                height="25px"
+                                                width="70px"
                                               />
                                             }
                                           >
@@ -31080,7 +31085,8 @@ body {
                                               className="Brand-iconContainer-49"
                                             >
                                               <test-file-stub
-                                                width="100px"
+                                                height="25px"
+                                                width="70px"
                                               />
                                             </div>
                                           </ImageContainer>

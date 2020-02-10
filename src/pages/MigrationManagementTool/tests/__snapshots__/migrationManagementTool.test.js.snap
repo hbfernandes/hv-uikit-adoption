@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Overview /> it matches the snapshot 1`] = `
+exports[`<MigrationManagementTool /> it matches the snapshot 1`] = `
 <Component>
   <Provider
     store={
@@ -4576,15 +4576,15 @@ body {
                 "sheet": StyleSheet {
                   "attached": true,
                   "classes": Object {
-                    "title": "Overview-title-1",
+                    "title": "MigrationManagementTool-title-1",
                   },
                   "deployed": true,
                   "linked": false,
                   "options": Object {
                     "Renderer": [Function],
-                    "classNamePrefix": "Overview",
+                    "classNamePrefix": "MigrationManagementTool",
                     "classes": Object {
-                      "title": "Overview-title-1",
+                      "title": "MigrationManagementTool-title-1",
                     },
                     "defaultTheme": Object {
                       "breakpoints": Object {
@@ -5061,18 +5061,18 @@ body {
                       "version": "9.8.7",
                     },
                     "link": false,
-                    "meta": "Overview",
-                    "name": "Overview",
+                    "meta": "MigrationManagementTool",
+                    "name": "MigrationManagementTool",
                     "parent": [Circular],
                     "sheet": [Circular],
                   },
                   "renderer": DomRenderer {
                     "element": <style
                       data-jss=""
-                      data-meta="Overview"
+                      data-meta="MigrationManagementTool"
                     >
                       
-.Overview-title-1 {
+.MigrationManagementTool-title-1 {
   margin-left: 15px;
 }
 
@@ -5088,7 +5088,7 @@ body {
                   },
                   "rules": RuleList {
                     "classes": Object {
-                      "title": "Overview-title-1",
+                      "title": "MigrationManagementTool-title-1",
                     },
                     "index": Array [
                       Object {
@@ -5096,7 +5096,7 @@ body {
                       },
                     ],
                     "map": Object {
-                      ".Overview-title-1": Object {
+                      ".MigrationManagementTool-title-1": Object {
                         "margin-left": "15px",
                       },
                       "title": Object {
@@ -5105,9 +5105,9 @@ body {
                     },
                     "options": Object {
                       "Renderer": [Function],
-                      "classNamePrefix": "Overview",
+                      "classNamePrefix": "MigrationManagementTool",
                       "classes": Object {
-                        "title": "Overview-title-1",
+                        "title": "MigrationManagementTool-title-1",
                       },
                       "defaultTheme": Object {
                         "breakpoints": Object {
@@ -5584,8 +5584,8 @@ body {
                         "version": "9.8.7",
                       },
                       "link": false,
-                      "meta": "Overview",
-                      "name": "Overview",
+                      "meta": "MigrationManagementTool",
+                      "name": "MigrationManagementTool",
                       "parent": [Circular],
                       "sheet": [Circular],
                     },
@@ -39633,7 +39633,7 @@ body {
           <Component
             classes={
               Object {
-                "title": "Overview-title-1",
+                "title": "MigrationManagementTool-title-1",
               }
             }
             theme={
@@ -42457,7 +42457,8 @@ body {
                     }
                     companyLogo={
                       <test-file-stub
-                        width="100px"
+                        height="25px"
+                        width="70px"
                       />
                     }
                     label="components.layout.header.appName"
@@ -42489,7 +42490,8 @@ body {
                       }
                       companyLogo={
                         <test-file-stub
-                          width="100px"
+                          height="25px"
+                          width="70px"
                         />
                       }
                       fixVerticalNavigation={false}
@@ -43565,7 +43567,8 @@ body {
                                           centerAlignElement={false}
                                           companyLogo={
                                             <test-file-stub
-                                              width="100px"
+                                              height="25px"
+                                              width="70px"
                                             />
                                           }
                                           productLogo={null}
@@ -43588,7 +43591,8 @@ body {
                                             }
                                             companyLogo={
                                               <test-file-stub
-                                                width="100px"
+                                                height="25px"
+                                                width="70px"
                                               />
                                             }
                                             productLogo={null}
@@ -44530,7 +44534,8 @@ body {
                                                 containerClassName="Brand-iconContainer-50"
                                                 image={
                                                   <test-file-stub
-                                                    width="100px"
+                                                    height="25px"
+                                                    width="70px"
                                                   />
                                                 }
                                               >
@@ -44538,7 +44543,8 @@ body {
                                                   className="Brand-iconContainer-50"
                                                 >
                                                   <test-file-stub
-                                                    width="100px"
+                                                    height="25px"
+                                                    width="70px"
                                                   />
                                                 </div>
                                               </ImageContainer>
@@ -48449,10 +48455,10 @@ body {
                 }
               }
             >
-              <Overview
+              <MigrationManagementTool
                 classes={
                   Object {
-                    "title": "Overview-title-1",
+                    "title": "MigrationManagementTool-title-1",
                   }
                 }
                 theme={
@@ -53383,11 +53389,11 @@ body {
                                     xs="false"
                                   >
                                     <WithStyles(Typography)
-                                      className="Overview-title-1"
+                                      className="MigrationManagementTool-title-1"
                                       variant="3xlTitle"
                                     >
                                       <Typography
-                                        className="Overview-title-1"
+                                        className="MigrationManagementTool-title-1"
                                         classes={
                                           Object {
                                             "3xlTitle": "Typography-3xlTitle-59",
@@ -54351,7 +54357,7 @@ body {
                                         variant="3xlTitle"
                                       >
                                         <h1
-                                          className="Typography-3xlTitle-59 Typography-baseFontFamily-80 Typography-margin-81 Overview-title-1"
+                                          className="Typography-3xlTitle-59 Typography-baseFontFamily-80 Typography-margin-81 MigrationManagementTool-title-1"
                                           theme={
                                             Object {
                                               "breakpoints": Object {
@@ -55282,7 +55288,7 @@ body {
                                             }
                                           }
                                         >
-                                          pages.overview.title
+                                          pages.migrationManagementTool.title
                                         </h1>
                                       </Typography>
                                     </WithStyles(Typography)>
@@ -55304,7 +55310,7 @@ body {
                     />
                   </WithWidth(WithStyles(ForwardRef(Grid)))>
                 </WithTheme(WithWidth(WithStyles(ForwardRef(Grid))))>
-              </Overview>
+              </MigrationManagementTool>
             </section>
           </Component>
         </WithStyles(Component)>
