@@ -9,32 +9,23 @@
  */
 
 import React from "react";
-import PropTypes from "prop-types";
-import HvTypography from "@hv/uikit-react-core/dist/Typography";
 import HvGrid from "@hv/uikit-react-core/dist/Grid";
-import { useTranslation } from "react-i18next";
 import withLayout from "lib/hocs/withLayout";
 import CTools from "components/common/CTools";
 
-const MigrationJobMonitoring = ({ classes }) => {
-  const { t } = useTranslation();
+const cdfEmbedPath =
+  "http://localhost:8081/pentaho/plugin/pentaho-cdf/api/cdf-embed-callback.js";
 
+const dashboardPath = "/public/BMC/dashboards/overviewAnalytics.wcdf";
+
+const MigrationJobMonitoring = () => {
   return (
     <HvGrid container>
       <HvGrid item xl={12}>
-        <HvTypography variant="3xlTitle" className={classes.title}>
-          {t("pages.operationalReports.management.title")}
-        </HvTypography>
-      </HvGrid>
-      <HvGrid item xl={12}>
-        {/* <CTools cdfEmbedPath="" dashboardPath="" /> */}
+        <CTools cdfEmbedPath={cdfEmbedPath} dashboardPath={dashboardPath} />
       </HvGrid>
     </HvGrid>
   );
-};
-
-MigrationJobMonitoring.propTypes = {
-  classes: PropTypes.instanceOf(Object).isRequired
 };
 
 export default withLayout(MigrationJobMonitoring);

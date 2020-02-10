@@ -8,12 +8,12 @@
  *  under which the software has been supplied.
  */
 
-import React, { Suspense } from "react";
+import React, { Suspense, lazy } from "react";
 
-const Dashboard = React.lazy(() => import("./CDF/CDFDashboard"));
+const Deferred = lazy(() => import("./CDF/CDFDashboard"));
 
-export default (
+export default props => (
   <Suspense fallback={<div>Loading...</div>}>
-    <Dashboard />
+    <Deferred {...props} />
   </Suspense>
 );

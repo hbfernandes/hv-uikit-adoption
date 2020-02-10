@@ -16,20 +16,29 @@ const getStyles = hasFooter => ({
   content: {
     marginTop: 50, // header height
     padding: `${hasFooter ? 0 : "30px 15px"}` // grid padding
+  },
+  wrapper: {
+    paddingTop: "50px",
+    zIndex: -1
   }
 });
 
-const withLayout = (Component, hasFooter = false) => props => {
-  const { content } = getStyles(hasFooter);
+const withLayout = (
+  Component,
+  hasFooter = false,
+  responsive = true
+) => props => {
+  const minWidthNotResponsive = responsive ? {} : { minWidth: 1265 };
+  const { wrapper, content } = getStyles(hasFooter);
 
   return (
-    <>
+    <div style={{ ...wrapper, ...minWidthNotResponsive }}>
       <Header />
       <section id="content" style={{ ...content }}>
         <Component {...props} />
       </section>
       {hasFooter && <Footer />}
-    </>
+    </div>
   );
 };
 
