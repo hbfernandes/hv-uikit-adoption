@@ -1,10 +1,20 @@
 // shared config (dev and prod)
 const { resolve } = require("path");
+const dotenv = require("dotenv");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const BASE_PATH = resolve(__dirname, "../..");
-console.log("BASE_PATH: ", BASE_PATH);
+
+// load environment file
+const env = dotenv.config().parsed;
+
+// parse environment file info for webpack format
+const envKeys = Object.keys(env).reduce((prev, next) => {
+  prev[`process.env.${next}`] = JSON.stringify(env[next]);
+  return prev;
+}, {});
 
 module.exports = {
   resolve: {
@@ -46,6 +56,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.DefinePlugin(envKeys), // init environment variables
     new HtmlWebpackPlugin({
       template: `${BASE_PATH}/public/index.html`
     }),
