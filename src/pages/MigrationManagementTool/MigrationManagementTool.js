@@ -14,18 +14,26 @@ import HvTypography from "@hv/uikit-react-core/dist/Typography";
 import HvGrid from "@hv/uikit-react-core/dist/Grid";
 import { useTranslation } from "react-i18next";
 import withLayout from "lib/hocs/withLayout";
+import Table from "components/migrationManagementTool/Table";
 
 const MigrationManagementTool = ({ classes }) => {
   const { t } = useTranslation();
 
   return (
-    <HvGrid container>
-      <HvGrid item xl={12}>
-        <HvTypography variant="3xlTitle" className={classes.title}>
-          {t("pages.migrationManagementTool.title")}
-        </HvTypography>
+    <>
+      <HvGrid container>
+        <HvGrid item xl={12}>
+          <HvTypography variant="3xlTitle" className={classes.title}>
+            {t("pages.migrationManagementTool.title")}
+          </HvTypography>
+        </HvGrid>
       </HvGrid>
-    </HvGrid>
+      <HvGrid container>
+        <HvGrid item xl={12}>
+          <Table />
+        </HvGrid>
+      </HvGrid>
+    </>
   );
 };
 

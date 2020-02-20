@@ -8,7 +8,7 @@
  *  under which the software has been supplied.
  */
 
-import uuid from "./node_modules/uuid";
+import uuid from "uuid";
 
 function loadSetup(cdfEmbedPath) {
   return new Promise(resolve => {
