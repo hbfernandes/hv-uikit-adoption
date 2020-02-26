@@ -18,7 +18,6 @@ const getStyles = hasFooter => ({
     padding: `${hasFooter ? 0 : "30px 15px"}` // grid padding
   },
   wrapper: {
-    paddingTop: "50px",
     zIndex: -1
   }
 });

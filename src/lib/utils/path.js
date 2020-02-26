@@ -8,18 +8,15 @@
  *  under which the software has been supplied.
  */
 
-const getSelection = (data, path, idx, selection = []) => {
-  data.forEach((element, i) => {
-    if (element.path === path) selection.push(i, idx);
-    if (element.subData) getSelection(element.subData.data, path, i, selection);
+const getSelection = (data, pathname) => {
+  let selection = {};
+
+  data.forEach(item => {
+    if (item.path === pathname) selection = { ...item };
+    if (item.data) getSelection(item.data, pathname);
   });
 
-  return selection.filter(item => item !== undefined).reverse();
+  return selection;
 };
 
-const getSelectedPath = (router, data) => {
-  const { pathname } = router.location;
-  return getSelection(data, pathname);
-};
-
-export { getSelectedPath };
+export { getSelection };
