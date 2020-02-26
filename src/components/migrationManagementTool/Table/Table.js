@@ -241,21 +241,15 @@ class Wrapper extends React.Component {
         secondaryActions={[
           {
             label: "Share",
-            action: data => {
-              alert(`Sharing ${JSON.stringify(data)}`);
-            }
+            action: () => {}
           },
           {
             label: "Hide",
-            action: data => {
-              alert(`Hiding ${JSON.stringify(data)}`);
-            }
+            action: () => {}
           },
           {
             label: "Remove",
-            action: data => {
-              alert(`Removing ${JSON.stringify(data)}`);
-            }
+            action: () => {}
           }
         ]}
       />

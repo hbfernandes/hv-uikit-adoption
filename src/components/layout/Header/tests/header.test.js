@@ -16,6 +16,10 @@ import Header from "../index";
 describe("<Header />", () => {
   let component;
 
+  beforeAll(() => {
+    window.history.replaceState({ query: "google" }, "MOCK");
+  });
+
   const WithStoreProvider = withStoreProvider(Header, {
     router: { location: { pathname: "/" } },
     auth: { isAuthed: false },
