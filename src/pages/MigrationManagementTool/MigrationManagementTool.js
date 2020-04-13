@@ -29,7 +29,7 @@ const MigrationManagementTool = ({ classes }) => {
         </HvGrid>
       </HvGrid>
       <HvGrid container>
-        <HvGrid item xl={12}>
+        <HvGrid item sm={12}>
           <Table />
         </HvGrid>
       </HvGrid>
