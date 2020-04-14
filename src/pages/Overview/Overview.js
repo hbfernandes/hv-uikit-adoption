@@ -14,6 +14,7 @@ import HvTypography from "@hv/uikit-react-core/dist/Typography";
 import HvGrid from "@hv/uikit-react-core/dist/Grid";
 import { useTranslation } from "react-i18next";
 import withLayout from "lib/hocs/withLayout";
+import Cardview from "components/assets/CardView";
 
 const Overview = ({ classes }) => {
   const { t } = useTranslation();
@@ -24,6 +25,9 @@ const Overview = ({ classes }) => {
         <HvTypography variant="3xlTitle" className={classes.title}>
           {t("pages.overview.title")}
         </HvTypography>
+      </HvGrid>
+      <HvGrid item xl={12}>
+        <Cardview />
       </HvGrid>
     </HvGrid>
   );
