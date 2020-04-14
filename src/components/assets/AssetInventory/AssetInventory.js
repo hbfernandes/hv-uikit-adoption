@@ -201,7 +201,7 @@ const Row = ({ classes, status, value, id }) => {
         </div>
       </HvListViewCell>
 
-      <HvListViewCell id={`probability ${id}`} key={`probability ${id}`}>
+      <HvListViewCell id={`probabilit ${id}`} key={`probabilit ${id}`}>
         <HvTypography variant="normalText">{value.probability}%</HvTypography>
       </HvListViewCell>
 
@@ -275,7 +275,8 @@ const machineData = id => {
 
 const values = () => {
   const cards = [];
-  for (let i = 0; i < 10; i + 1)
+  // eslint-disable-next-line
+  for (let i = 0; i < 10; ++i)
     cards.push(i % 2 === 0 ? compressorData(i) : machineData(i));
   return cards;
 };
