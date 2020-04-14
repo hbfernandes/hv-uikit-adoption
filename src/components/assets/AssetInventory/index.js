@@ -10,8 +10,8 @@
 
 import withStyles from "@material-ui/core/styles/withStyles";
 import styles from "./styles";
-import CardView from "./CardView";
+import AssetInventory from "./AssetInventory";
 
-export default withStyles(styles, { name: "CardView", withTheme: true })(
-  CardView
+export default withStyles(styles, { name: "AssetInventory", withTheme: true })(
+  AssetInventory
 );

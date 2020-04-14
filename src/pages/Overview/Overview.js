@@ -14,7 +14,7 @@ import HvTypography from "@hv/uikit-react-core/dist/Typography";
 import HvGrid from "@hv/uikit-react-core/dist/Grid";
 import { useTranslation } from "react-i18next";
 import withLayout from "lib/hocs/withLayout";
-import Cardview from "components/assets/CardView";
+import AssetInventory from "components/assets/AssetInventory";
 
 const Overview = ({ classes }) => {
   const { t } = useTranslation();
@@ -27,7 +27,7 @@ const Overview = ({ classes }) => {
         </HvTypography>
       </HvGrid>
       <HvGrid item xl={12}>
-        <Cardview />
+        <AssetInventory />
       </HvGrid>
     </HvGrid>
   );
