@@ -8,10 +8,21 @@
  *  under which the software has been supplied.
  */
 
-import withStyles from "@material-ui/core/styles/withStyles";
-import styles from "./styles";
-import AssetInventory from "./AssetInventory";
+const styles = theme => ({
+  timestamp: {
+    padding: `2px ${theme.hv.spacing.xs}px 0 ${theme.hv.spacing.xs}px`,
+    marginRight: "10px",
+    borderRight: `solid 2px ${theme.hv.palette.atmosphere.atmo5}`
+  },
+  icon: {
+    display: "block"
+  },
+  cellInline: {
+    display: "inline-flex"
+  },
+  schedule: {
+    paddingTop: "2px"
+  }
+});
 
-export default withStyles(styles, { name: "AssetInventory", withTheme: true })(
-  AssetInventory
-);
+export default styles;

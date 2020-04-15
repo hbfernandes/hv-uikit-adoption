@@ -14,7 +14,7 @@ import HvTypography from "@hv/uikit-react-core/dist/Typography";
 import HvGrid from "@hv/uikit-react-core/dist/Grid";
 import { useTranslation } from "react-i18next";
 import withLayout from "lib/hocs/withLayout";
-import AssetInventory from "components/assets/AssetInventory";
+import AssetInventory from "components/overview/AssetInventory";
 
 const Overview = ({ classes }) => {
   const { t } = useTranslation();
