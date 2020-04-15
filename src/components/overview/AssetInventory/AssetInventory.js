@@ -9,6 +9,7 @@
  */
 
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import HvAssetInventory from "@hv/uikit-react-core/dist/AssetInventory";
 import HvCardView from "@hv/uikit-react-core/dist/AssetInventory/CardView";
 import HvListView from "@hv/uikit-react-core/dist/AssetInventory/ListView";
@@ -19,13 +20,15 @@ import ListRender from "../ListRender";
 import configuration from "./configuration";
 import { fetchAssets } from "../../../lib/api/assets";
 
-const actions = [
-  { id: "details", label: "Details", disabled: false },
-  { id: "dismiss", label: "Dismiss", disabled: false }
-];
+const actions = [{ id: "details", label: "Details", disabled: false }];
 
 const AssetInventory = () => {
+  const history = useHistory();
   const [data, setData] = useState([]);
+
+  const handleAction = id => {
+    history.push(`/asset/${id}`);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,7 +44,8 @@ const AssetInventory = () => {
         values={data}
         configuration={configuration}
         actions={actions}
-        maxVisibleActions={3}>
+        maxVisibleActions={3}
+        actionsCallback={handleAction}>
         <HvCardView id="card" icon={<Cards />} renderer={CardRender} />
         <HvListView id="list" icon={<List />} renderer={ListRender} />
       </HvAssetInventory>

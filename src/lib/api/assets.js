@@ -31,7 +31,7 @@ const severeBreakdown = {
   relatedAssets: "Track B, Load 2 Brake"
 };
 
-const generateData = (id) => {
+const generateData = id => {
   const risk = getRandom(100, 1);
   const timeHorizon = getRandom(8, 1);
   const data = getRandom(10, 1) % 2 === 0 ? riskDownTime : severeBreakdown;
@@ -64,4 +64,10 @@ const fetchAssets = async () => {
   });
 };
 
-export { fetchAssets };
+const fetchAsset = async id => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(generateData(id.split("_")[1])), 500);
+  });
+};
+
+export { fetchAssets, fetchAsset };

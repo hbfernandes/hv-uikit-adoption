@@ -10,11 +10,6 @@
 
 import { createStyles } from "@material-ui/core";
 
-const styles = () =>
-  createStyles({
-    title: {
-      marginLeft: "15px"
-    }
-  });
+const styles = () => createStyles({});
 
 export default styles;

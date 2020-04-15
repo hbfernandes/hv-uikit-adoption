@@ -21,36 +21,6 @@ const pages = {
     {
       label: "Overview",
       path: "/overview"
-    },
-    {
-      label: "Events",
-      subData: {
-        data: [
-          {
-            label: "Work Orders",
-            path: "/events/work-orders"
-          }
-        ]
-      }
-    },
-    {
-      label: "Asset",
-      path: "/asset"
-    },
-    {
-      label: "Analytics",
-      subData: {
-        data: [
-          {
-            label: "Model Effectiveness",
-            path: "/analytics/model-effectiveness"
-          },
-          {
-            label: "Trend Analysis",
-            path: "/analytics/trend-analysis"
-          }
-        ]
-      }
     }
   ]
 };

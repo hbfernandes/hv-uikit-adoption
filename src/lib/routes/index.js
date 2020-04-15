@@ -12,10 +12,7 @@ import React from "react";
 import { Route, Switch } from "react-router";
 import Login from "pages/Login";
 import Overview from "pages/Overview";
-import WorkOrders from "pages/WorkOrders";
 import Asset from "pages/Asset";
-import ModelEffectiveness from "pages/ModelEffectiveness";
-import TrendAnalysis from "pages/TrendAnalysis";
 import NotFound from "pages/NotFound";
 import AuthRoute from "./AuthRoute";
 
@@ -23,13 +20,7 @@ const Routes = () => (
   <Switch>
     <AuthRoute path="/" exact redirect="/overview" />
     <AuthRoute path="/overview" component={Overview} />
-    <AuthRoute path="/events/work-orders" component={WorkOrders} />
-    <AuthRoute path="/asset" component={Asset} />
-    <AuthRoute
-      path="/analytics/model-effectiveness"
-      component={ModelEffectiveness}
-    />
-    <AuthRoute path="/analytics/trend-analysis" component={TrendAnalysis} />
+    <AuthRoute path="/asset/:id" component={Asset} />
     <AuthRoute path="/login" exact component={Login} />
     <Route component={NotFound} />
   </Switch>

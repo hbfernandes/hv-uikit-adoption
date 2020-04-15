@@ -8,29 +8,34 @@
  *  under which the software has been supplied.
  */
 
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import HvTypography from "@hv/uikit-react-core/dist/Typography";
 import HvGrid from "@hv/uikit-react-core/dist/Grid";
-import { useTranslation } from "react-i18next";
 import withLayout from "lib/hocs/withLayout";
+import { fetchAsset } from "lib/api/assets";
 
-const Asset = ({ classes }) => {
-  const { t } = useTranslation();
+const Asset = () => {
+  const [data, setData] = useState({});
+  const { id } = useParams();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await fetchAsset(id);
+      setData(result);
+    };
+    fetchData();
+  });
 
   return (
     <HvGrid container>
       <HvGrid item xl={12}>
-        <HvTypography variant="3xlTitle" className={classes.title}>
-          {t("pages.asset.title")}
-        </HvTypography>
+        <HvTypography variant="3xlTitle">{data.headerTitle}</HvTypography>
+        <br />
+        <HvTypography variant="normalText">{data.relatedAssets}</HvTypography>
       </HvGrid>
     </HvGrid>
   );
-};
-
-Asset.propTypes = {
-  classes: PropTypes.instanceOf(Object).isRequired
-};
+}
 
 export default withLayout(Asset);
